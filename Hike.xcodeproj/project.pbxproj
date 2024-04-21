@@ -18,6 +18,7 @@
 		1E2A58232BD5592A00B07E1F /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A58222BD5592A00B07E1F /* GradientButtonStyle.swift */; };
 		1E2A58252BD57E3A00B07E1F /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A58242BD57E3A00B07E1F /* CustomCircleView.swift */; };
 		1E2A58272BD5825F00B07E1F /* MotionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A58262BD5825F00B07E1F /* MotionAnimationView.swift */; };
+		1E2A582C2BD58FAF00B07E1F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A582B2BD58FAF00B07E1F /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		1E2A58222BD5592A00B07E1F /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
 		1E2A58242BD57E3A00B07E1F /* CustomCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
 		1E2A58262BD5825F00B07E1F /* MotionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionAnimationView.swift; sourceTree = "<group>"; };
+		1E2A582B2BD58FAF00B07E1F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,7 @@
 			children = (
 				1E2A581D2BD527BA00B07E1F /* Utility */,
 				1E2A580A2BD508FE00B07E1F /* HikeApp.swift */,
-				1E2A580C2BD508FE00B07E1F /* ContentView.swift */,
+				1E2A58282BD58D3800B07E1F /* Screen */,
 				1E2A580E2BD508FF00B07E1F /* Assets.xcassets */,
 				1E2A58102BD508FF00B07E1F /* Preview Content */,
 				1E2A581A2BD5210C00B07E1F /* Component */,
@@ -103,6 +105,15 @@
 				1E2A58222BD5592A00B07E1F /* GradientButtonStyle.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		1E2A58282BD58D3800B07E1F /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1E2A580C2BD508FE00B07E1F /* ContentView.swift */,
+				1E2A582B2BD58FAF00B07E1F /* SettingsView.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +195,7 @@
 				1E2A58272BD5825F00B07E1F /* MotionAnimationView.swift in Sources */,
 				1E2A581C2BD5213700B07E1F /* CustomBackgroundView.swift in Sources */,
 				1E2A581F2BD527D400B07E1F /* ColorExtension.swift in Sources */,
+				1E2A582C2BD58FAF00B07E1F /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
