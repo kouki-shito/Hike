@@ -8,7 +8,22 @@
 import SwiftUI
 
 struct CardView: View {
+  //MARK: - Properties
+  @State private var imageNumber : Int = 1
+  @State private var randomNumber : Int = 1
+
+  //MARK: -FUNCTIONS
+  func randomImage(){
+    repeat{
+      randomNumber = Int.random(in: 1...5)
+    } while randomNumber == imageNumber
+
+    imageNumber = randomNumber
+  }
+
   var body: some View {
+    // MARK: -CARD
+
     ZStack {
       CustomBackgroundView()
       VStack {
@@ -28,13 +43,11 @@ struct CardView: View {
               )
 
             Spacer()
-
             Button{
-              print("Button Pressed")
+              print("Top Button was Pressed")
             }label: {
               CustomBottonView()
             }
-
           }
 
 
@@ -53,20 +66,41 @@ struct CardView: View {
               .linearGradient(
                 colors: [
                   Color.customIndigoMedium,
-                  Color.customSalmonLight,
-                ],
+                  Color.customSalmonLight],
                 startPoint:.topLeading,
                 endPoint:.bottomTrailing
               )
             )
             .frame(width: 256,height: 256)
 
-          Image("image-1")
+          Image("image-\(imageNumber)")
             .resizable()
             .scaledToFit()
+            .animation(.default, value: imageNumber)
         }
+
         //MARK: - FOOTER
-      }
+        Button(){
+          //ACTION:Generate random number
+          print("Under Button was Pressed")
+          randomImage()
+        }label: {
+          Text("Explore More")
+            .font(.title2)
+            .fontWeight(.heavy)
+            .foregroundStyle(
+              LinearGradient(
+                colors: [
+                  .customGreenLight,
+                  .customGreenMedium], 
+                startPoint: .top, 
+                endPoint: .bottom)
+            )
+            .shadow(color:.black.opacity(0.25),
+                    radius: 0.25,x:1,y:2)
+        }
+        .buttonStyle(GradientButton())
+      }//:VSTACKS
     }//CARD
     .frame(width: 320,height: 570)
 
